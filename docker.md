@@ -1,8 +1,9 @@
 # Docker Education
 
-Running interactive and daemon terminal programs in containers
+## Running interactive and daemon terminal programs in containers
 
-Basic Docker operations and commands:
+## Basic Docker operations and commands:
+
 Create detached and interactive containers   
 
 `docker run --detach --name web nginx:latest`
