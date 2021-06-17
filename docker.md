@@ -19,6 +19,10 @@ What is [Busybox](https://hub.docker.com/_/busybox)? "The Swiss Army Knife of Em
 ### List containers on your system
 The [docker ps](https://docs.docker.com/engine/reference/commandline/ps/) command will list currently running containers on the system
 
+`docker ps`
+
+
+
 ### View container logs                  
 ### Stop and restart containers                  
 ### Reattach a terminal to a container                  
