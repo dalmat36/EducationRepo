@@ -12,7 +12,7 @@ The following command runs a busybox container with the standard input stream op
 
 `docker run --interactive --tty --link web:web --name web_test busybox:1.29 /bin/sh`
 
-[Busybox](https://hub.docker.com/_/busybox)
+What is [Busybox]? "The Swiss Army Knife of Embedded Linux"(https://hub.docker.com/_/busybox)
 
 ### List containers on your system                  
 ### View container logs                  
