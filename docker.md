@@ -3,7 +3,8 @@
 Running interactive and daemon terminal programs in containers
 
 Basic Docker operations and commands:
-Create detached and interactive containers                  
+Create detached and interactive containers    
+'docker run --detach --name web nginx:latest'
 List containers on your system                  
 View container logs                  
 Stop and restart containers                  
