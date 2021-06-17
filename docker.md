@@ -8,6 +8,10 @@ The following command runs a container with the latest nginx as a daemon backgro
 
 `docker run --detach --name web nginx:latest`
 
+The following command runs a busybox container with the standard input stream open (stdin), with the --interactive option, and creates a virtual terminal, with the --tty option.
+
+`docker run --interactive --tty --link web:web --name web_test busybox:1.29 /bin/sh`
+
 ### List containers on your system                  
 ### View container logs                  
 ### Stop and restart containers                  
