@@ -11,11 +11,14 @@ The following command runs a container with the latest nginx as a daemon backgro
 The following command runs a busybox container with the standard input stream open (stdin), with the --interactive option, and creates a virtual terminal, with the --tty option.
 
 `docker run --interactive --tty --link web:web --name web_test busybox:1.29 /bin/sh`
+Note: to exit the interactive terminal use: CTRL P then Q
 
 What is [Busybox](https://hub.docker.com/_/busybox)? "The Swiss Army Knife of Embedded Linux"
 [nginx](https://hub.docker.com/_/nginx) is a popular web server
 
-### List containers on your system                  
+### List containers on your system
+The [docker ps](https://docs.docker.com/engine/reference/commandline/ps/) command will list currently running containers on the system
+
 ### View container logs                  
 ### Stop and restart containers                  
 ### Reattach a terminal to a container                  
