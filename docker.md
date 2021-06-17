@@ -34,7 +34,10 @@ The [docker restart](https://docs.docker.com/engine/reference/commandline/restar
 
 `docker restart web`
 
-### Reattach a terminal to a container                  
+### Reattach a terminal to a container    
+The [docker attach](https://docs.docker.com/engine/reference/commandline/attach/) command will attach local standard input, output, and error streams to a running container.
+
+`docker attach web_test`
 ### Detach from an attached container
 
 ### Isolating programs from each other and injecting configuration
