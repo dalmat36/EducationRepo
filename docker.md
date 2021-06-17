@@ -46,6 +46,8 @@ To stop a container, use CTRL-c. This key sequence sends SIGKILL to the containe
 
 "Docker creates a new PID namespace for each container by default. A container’s PID namespace isolates processes in that container from processes in other containers."
 
+"A user can pass input or provide additional configuration to a process in a container by specifying environment variables at container-creation time."
+
 ### Running multiple programs in a container 
 
 ### Durable containers and the container life cycle  
