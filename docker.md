@@ -21,13 +21,19 @@ The [docker ps](https://docs.docker.com/engine/reference/commandline/ps/) comman
 
 `docker ps`
 
-
-
 ### View container logs    
 The [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) command will display the current logs of the specified container. "Anything that the program writes to the stdout or stderr output streams will be recorded in this log. The problem with this pattern is that the log is never rotated or truncated by default, so the data written to the log for a container will remain and grow as long as the container exists." DockerInAction Ch2
 
 `docker logs web`
-### Stop and restart containers                  
+### Stop and restart containers      
+The [docker stop](https://docs.docker.com/engine/reference/commandline/stop/) command will stop the specified container. 
+
+`docker stop web`
+
+The [docker restart](https://docs.docker.com/engine/reference/commandline/restart/) command will restart the specified container.
+
+`docker restart web`
+
 ### Reattach a terminal to a container                  
 ### Detach from an attached container
 
