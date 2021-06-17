@@ -49,6 +49,9 @@ To stop a container, use CTRL-c. This key sequence sends SIGKILL to the containe
 ### Running multiple programs in a container 
 
 ### Durable containers and the container life cycle  
+"Using the --read-only flag at container-creation time will mount the container filesystem as read-only and prevent specialization of the container."
+
+"A container restart policy, set with the --restart flag at container-creation time, will help your systems automatically recover in the event of a failure."
 
 ### Cleaning up
 
