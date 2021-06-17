@@ -1,6 +1,6 @@
-# Docker Education
+# Docker in Action Notes
 
-## Basic Docker operations and commands:
+## Chapter 1: Running sofware in containers:
 
 ### Create detached and interactive containers   
 
@@ -56,4 +56,7 @@ To stop a container, use CTRL-c. This key sequence sends SIGKILL to the containe
 "A container restart policy, set with the --restart flag at container-creation time, will help your systems automatically recover in the event of a failure."
 
 ### Cleaning up
+
+## Chapter 3: Software and installation simplified![image](https://user-images.githubusercontent.com/1831568/122472404-8d6d7a80-cf8e-11eb-8210-2ac149fd487c.png)
+
 
