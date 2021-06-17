@@ -1,10 +1,10 @@
 # Docker Education
 
-## Running interactive and daemon terminal programs in containers
-
 ## Basic Docker operations and commands:
 
 ### Create detached and interactive containers   
+
+The following command runs a container with the latest nginx as a daemon background service. 
 
 `docker run --detach --name web nginx:latest`
 
