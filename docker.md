@@ -42,6 +42,9 @@ The [docker attach](https://docs.docker.com/engine/reference/commandline/attach/
 To stop a container, use CTRL-c. This key sequence sends SIGKILL to the container. If the container was run with -i and -t, you can detach from a container and leave it running using the CTRL-p CTRL-q key sequence.
 
 ### Isolating programs from each other and injecting configuration
+"Every running program—or process—on a Linux machine has a unique number called a process identifier (PID). A PID namespace is a set of unique numbers that identify processes."
+
+"Docker creates a new PID namespace for each container by default. A container’s PID namespace isolates processes in that container from processes in other containers."
 
 ### Running multiple programs in a container 
 
