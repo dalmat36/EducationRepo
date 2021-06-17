@@ -25,6 +25,9 @@ The [docker ps](https://docs.docker.com/engine/reference/commandline/ps/) comman
 The [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) command will display the current logs of the specified container. "Anything that the program writes to the stdout or stderr output streams will be recorded in this log. The problem with this pattern is that the log is never rotated or truncated by default, so the data written to the log for a container will remain and grow as long as the container exists." DockerInAction Ch2
 
 `docker logs web`
+
+![image](https://user-images.githubusercontent.com/1831568/122472519-b4c44780-cf8e-11eb-83d2-8f8ccce4b63e.png)
+
 ### Stop and restart containers      
 The [docker stop](https://docs.docker.com/engine/reference/commandline/stop/) command will stop the specified container. 
 
@@ -57,6 +60,5 @@ To stop a container, use CTRL-c. This key sequence sends SIGKILL to the containe
 
 ### Cleaning up
 
-## Chapter 3: Software and installation simplified![image](https://user-images.githubusercontent.com/1831568/122472404-8d6d7a80-cf8e-11eb-8210-2ac149fd487c.png)
-
+## Chapter 3: Software and installation simplified
 
