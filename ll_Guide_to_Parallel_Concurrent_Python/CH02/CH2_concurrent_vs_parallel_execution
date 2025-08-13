@@ -1,0 +1,51 @@
+
+# Concurrency versus Parallelism in Computing
+
+Concurrency refers to the ability of a program to be broken into independent parts that can be executed out of order without affecting the final result. It focuses on how a program is structured and composed of independently executing processes. **Concurrent execution does not necessarily mean parallel execution.**
+
+---
+
+## Analogy: Salad-Making
+Barron and Olivia use a salad-making analogy to explain concurrency and parallelism:
+- Two tasks (chopping tomatoes and slicing cucumbers) represent concurrent processes.
+- Their single knife represents a single-core processor, where tasks must take turns executing.
+
+---
+
+## Concurrent Execution
+- Concurrent processes overlap in time but may not execute simultaneously on a single processor.
+- Rapid task-switching can create an illusion of simultaneous execution, but it's not true parallelism.
+
+---
+
+## Parallel Execution
+- Requires parallel hardware, such as multiple processors or cores.
+- Olivia introduces a second knife and cutting board (processor) to demonstrate true parallel execution.
+- Parallel execution allows multiple tasks to be performed simultaneously, potentially speeding up the overall process.
+
+---
+
+## Forms of Parallel Hardware
+- Multicore processors in desktop computers and mobile devices
+- Graphics processing units (GPUs) with numerous specialized cores
+- Computer clusters that distribute processing across multiple systems
+
+---
+
+## Key Distinctions
+- **Concurrency** is about program structure and dealing with multiple things at once
+- **Parallelism** involves simultaneous execution and doing multiple things at once
+- Concurrency enables potential parallel execution but doesn't guarantee it
+
+---
+
+## Use Cases
+- Concurrent programming is beneficial for I/O-dependent tasks like graphical user interfaces
+- Parallel processing is particularly useful for computation-intensive tasks, such as matrix multiplication
+
+---
+
+## Practical Applications
+- Device drivers for I/O devices (mouse, keyboard, and hard drive) execute concurrently but may not benefit significantly from parallelism
+- Graphical user interfaces use concurrency to maintain responsiveness during time-consuming operations
+- Large mathematical operations can be divided into subparts for efficient parallel processing
