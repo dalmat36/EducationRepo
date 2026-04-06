@@ -3,13 +3,14 @@
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, UploadCloud } from "lucide-react";
 import { Expense } from "@/types/expense";
 import { useExpenses } from "@/hooks/useExpenses";
 import Navigation from "@/components/Navigation";
 import SummaryCards from "@/components/SummaryCards";
 import ExpenseList from "@/components/ExpenseList";
 import ExpenseForm from "@/components/ExpenseForm";
+import CloudExportPanel from "@/components/CloudExportPanel";
 
 const MonthlyChart = dynamic(() => import("@/components/charts/MonthlyChart"), { ssr: false });
 const CategoryChart = dynamic(() => import("@/components/charts/CategoryChart"), { ssr: false });
@@ -18,6 +19,7 @@ export default function DashboardPage() {
   const { expenses, summary, isLoaded, addExpense, updateExpense, deleteExpense } = useExpenses();
   const [showForm, setShowForm] = useState(false);
   const [editExpense, setEditExpense] = useState<Expense | null>(null);
+  const [showExportPanel, setShowExportPanel] = useState(false);
 
   if (!isLoaded) {
     return (
@@ -53,9 +55,18 @@ export default function DashboardPage() {
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-6">
         {/* Page title */}
-        <div>
-          <h1 className="text-2xl font-bold text-slate-900">Dashboard</h1>
-          <p className="text-slate-500 text-sm mt-1">Your spending at a glance</p>
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-bold text-slate-900">Dashboard</h1>
+            <p className="text-slate-500 text-sm mt-1">Your spending at a glance</p>
+          </div>
+          <button
+            onClick={() => setShowExportPanel(true)}
+            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-600 to-violet-600 text-white text-sm font-medium rounded-lg hover:from-indigo-700 hover:to-violet-700 transition-all shadow-sm"
+          >
+            <UploadCloud size={16} />
+            Export & Sync
+          </button>
         </div>
 
         {/* Summary Cards */}
@@ -93,6 +104,10 @@ export default function DashboardPage() {
           onClose={handleFormClose}
           editExpense={editExpense}
         />
+      )}
+
+      {showExportPanel && (
+        <CloudExportPanel expenses={expenses} onClose={() => setShowExportPanel(false)} />
       )}
     </>
   );
