@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, List, PlusCircle } from "lucide-react";
+import { LayoutDashboard, List, PlusCircle, Sparkles } from "lucide-react";
 
 interface NavigationProps {
   onAddExpense: () => void;
@@ -48,6 +48,17 @@ export default function Navigation({ onAddExpense }: NavigationProps) {
             >
               <List size={16} />
               <span className="hidden sm:inline">Expenses</span>
+            </Link>
+            <Link
+              href="/insights"
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                pathname === "/insights"
+                  ? "bg-indigo-50 text-indigo-700"
+                  : "text-slate-600 hover:bg-slate-100"
+              }`}
+            >
+              <Sparkles size={16} />
+              <span className="hidden sm:inline">Insights</span>
             </Link>
           </nav>
 
